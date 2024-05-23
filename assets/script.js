@@ -29,7 +29,7 @@ const displayAverageSalary = function(employeesArray) {
     currency:"USD"
   })}`);
 
-  console.log("=================================");
+  console.log("==============================");
 }
 
 
@@ -45,6 +45,8 @@ let employees = collectEmployees();
 displayAverageSalary(employees);
 getRandomEmployee(employees);
 
+
+
 /*
   ====================
   STARTER CODE
@@ -55,6 +57,7 @@ getRandomEmployee(employees);
 const displayEmployees = function(employeesArray) {
   // Get the employee table
   const employeeTable = document.querySelector('#employee-table');
+  
 
   // Clear the employee table
   employeeTable.innerHTML = '';
@@ -107,6 +110,9 @@ const trackEmployeeData = function() {
 
   displayEmployees(employees);
 }
+displayEmployees(employees);
+
+// console.log(employees);
 
 // Add event listener to 'Add Employees' button
 addEmployeesBtn.addEventListener('click', trackEmployeeData);
