@@ -4,17 +4,23 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 // Collect employee data
 const collectEmployees = function() {
   let employeesArray = [];
-  let employeeCount = parseInt(prompt("How many employees would you like to add?"));
-  for (let i = 0; i < employeeCount; i++) {
+  while (true) {
     let employee = {
-      firstName: prompt("Enter employee's first name:"),
-      lastName: prompt("Enter employee's last name:"),
-      salary: parseFloat(prompt("Enter employee's salary:"))
+      firstName: prompt("Enter employee's first name (or press cancel to stop):"),
+      lastName: prompt("Enter employee's last name (or press cancel to stop):"),
+      salary: parseFloat(prompt("Enter employee's salary (or press cancel to stop):"))
     };
+    if (employee.firstName === null || employee.lastName === null || employee.salary === null) {
+      break;
+    }
     employeesArray.push(employee);
   }
+
+  console.log(employeesArray);
+
   return employeesArray; // return the array
-}
+
+  }
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
@@ -29,7 +35,7 @@ const displayAverageSalary = function(employeesArray) {
     currency:"USD"
   })}`);
 
-  console.log("=================================");
+  console.log("==============================");
 }
 
 
@@ -45,6 +51,8 @@ let employees = collectEmployees();
 displayAverageSalary(employees);
 getRandomEmployee(employees);
 
+
+
 /*
   ====================
   STARTER CODE
@@ -55,6 +63,7 @@ getRandomEmployee(employees);
 const displayEmployees = function(employeesArray) {
   // Get the employee table
   const employeeTable = document.querySelector('#employee-table');
+  
 
   // Clear the employee table
   employeeTable.innerHTML = '';
@@ -107,6 +116,9 @@ const trackEmployeeData = function() {
 
   displayEmployees(employees);
 }
+displayEmployees(employees);
+
+// console.log(employees);
 
 // Add event listener to 'Add Employees' button
 addEmployeesBtn.addEventListener('click', trackEmployeeData);
