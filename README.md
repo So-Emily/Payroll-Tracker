@@ -1,4 +1,13 @@
-# 03 JavaScript: Employee Payroll Tracker
+# Employee Payroll Tracker
+
+##Description
+
+This program is used to track the salaries of employees and console log the average of the salaries given. 
+It also has a feature where a name is picked randomly and is revealed in the console for a drawing winner type use.
+
+![finished-screenshot](https://github.com/So-Emily/Payroll-Tracker/assets/10500315/ec5058da-fcdd-4dd7-bb26-30697c172586) 
+![fill-in-box](https://github.com/So-Emily/Payroll-Tracker/assets/10500315/ded7d97d-f712-4281-8583-cff745694e6b)
+
 
 
 ## The Assignment README
