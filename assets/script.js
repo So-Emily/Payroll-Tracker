@@ -10,15 +10,21 @@ const collectEmployees = function() {
       lastName: prompt("Enter employee's last name (or press cancel to stop):"),
       salary: parseFloat(prompt("Enter employee's salary (or press cancel to stop):"))
     };
+    
+    // Check if the user pressed cancel
     if (employee.firstName === null || employee.lastName === null || employee.salary === null) {
       break;
+    // Trying to figure out how to have them only need to press cancel once 
+    } else if (employee.firstName === "" || employee.lastName === "" || isNaN(employee.salary)) {
+      break;
     }
+    // Add the employee to the array
     employeesArray.push(employee);
   }
-
+  
   console.log(employeesArray);
-
-  return employeesArray; // return the array
+  // return the array
+  return employeesArray; 
 
   }
 
@@ -29,12 +35,13 @@ const displayAverageSalary = function(employeesArray) {
   for (let i = 0; i < employeesArray.length; i++) {
     totalSalary += employeesArray[i].salary;
   }
+  // Calculate the average salary
   averageSalary = totalSalary / employeesArray.length;
   console.log(`The average salary is: ${averageSalary.toLocaleString("en-US",{
     style:"currency",
     currency:"USD"
   })}`);
-
+  
   console.log("==============================");
 }
 
@@ -50,8 +57,6 @@ console.log(`Congratulations ${selectRandomEmployee.firstName} ${selectRandomEmp
 let employees = collectEmployees();
 displayAverageSalary(employees);
 getRandomEmployee(employees);
-
-
 
 /*
   ====================
