@@ -3,7 +3,9 @@
 ## Description
 
 This program is used to track the salaries of employees and console log the average of the salaries given. 
+
 It also has a feature where a name is picked randomly and is revealed in the console for a drawing winner type use.
+
 
 
 ![finished-screenshot](https://github.com/So-Emily/Payroll-Tracker/assets/10500315/9e1aaa94-b8bd-4a79-a974-5f1fa03b0bbc)
